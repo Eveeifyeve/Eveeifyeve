@@ -46,10 +46,7 @@ Hi, I am Eveeifyeve 👋
 </details>
 
 
-![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
 
-
-### Check out all of my repos!
 
 <a href="https://github.com/Eveeifyeve/Dotfiles">
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=Dotfiles&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Dotfiles repo pin" />
@@ -76,3 +73,5 @@ Hi, I am Eveeifyeve 👋
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=docker-rust-minecraft-server&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$docker-rust-minecraft-server repo pin" />
 </a>
     
+
+![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
