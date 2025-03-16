@@ -51,22 +51,28 @@ Hi, I am Eveeifyeve 👋
 
 ### Check out all of my repos!
 
-<a href="https://github.com/eveeifyeve/Dotfiles">
-    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=Dotfiles&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Dotfiles repo pin" />
+<a href="https://github.com/Eveeifyeve/Dotfiles">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=Dotfiles&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Dotfiles repo pin" />
 </a>
 <a href="https://github.com/Minecraft-Essentials/minecraft-essentials">
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Minecraft-Essentials&repo=minecraft-essentials&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$minecraft-essentials repo pin" />
 </a>
-<a href="https://github.com/eveeifyeve/docker-rust-minecraft-server">
-    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=docker-rust-minecraft-server&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$docker-rust-minecraft-server repo pin" />
+<a href="https://github.com/Eveeifyeve/Skyblockify">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=Skyblockify&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Skyblockify repo pin" />
 </a>
 <a href="https://github.com/MCOpenAnti/MCOpenAnti">
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MCOpenAnti&repo=MCOpenAnti&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$MCOpenAnti repo pin" />
 </a>
-<a href="https://github.com/eveeifyeve/DJApp">
-    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=DJApp&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$DJApp repo pin" />
+<a href="https://github.com/Eveeifyeve/DJApp">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=DJApp&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$DJApp repo pin" />
 </a>
-<a href="https://github.com/eveeifyeve/BedrockGradleManifest">
-    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=BedrockGradleManifest&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$BedrockGradleManifest repo pin" />
+<a href="https://github.com/Eveeifyeve/BedrockGradleManifest">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=BedrockGradleManifest&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$BedrockGradleManifest repo pin" />
+</a>
+<a href="https://github.com/Eveeifyeve/vexus">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=vexus&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$vexus repo pin" />
+</a>
+<a href="https://github.com/Eveeifyeve/docker-rust-minecraft-server">
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Eveeifyeve&repo=docker-rust-minecraft-server&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$docker-rust-minecraft-server repo pin" />
 </a>
     
