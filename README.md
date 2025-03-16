@@ -52,21 +52,21 @@ Hi, I am Eveeifyeve 👋
 ### Check out all of my repos!
 
 <a href="https://github.com/eveeifyeve/Dotfiles">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=Dotfiles" alt="Dotfiles github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=Dotfiles&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Dotfiles repo pin" />
 </a>
 <a href="https://github.com/Minecraft-Essentials/minecraft-essentials">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Minecraft-Essentials&repo=minecraft-essentials" alt="minecraft-essentials github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Minecraft-Essentials&repo=minecraft-essentials&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$minecraft-essentials repo pin" />
 </a>
 <a href="https://github.com/eveeifyeve/docker-rust-minecraft-server">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=docker-rust-minecraft-server" alt="docker-rust-minecraft-server github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=docker-rust-minecraft-server&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$docker-rust-minecraft-server repo pin" />
 </a>
 <a href="https://github.com/MCOpenAnti/MCOpenAnti">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MCOpenAnti&repo=MCOpenAnti" alt="MCOpenAnti github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MCOpenAnti&repo=MCOpenAnti&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$MCOpenAnti repo pin" />
 </a>
 <a href="https://github.com/eveeifyeve/DJApp">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=DJApp" alt="DJApp github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=DJApp&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$DJApp repo pin" />
 </a>
 <a href="https://github.com/eveeifyeve/BedrockGradleManifest">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=BedrockGradleManifest" alt="BedrockGradleManifest github pin"/>
+    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=eveeifyeve&repo=BedrockGradleManifest&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$BedrockGradleManifest repo pin" />
 </a>
     
