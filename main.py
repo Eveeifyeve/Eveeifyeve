@@ -55,6 +55,18 @@ def githubStats(url_point: str, params: list, alt: str) -> str:
     """
 
 
+def github_extra_repos(repo: str) -> str:
+    base_url = "https://github-readme-stats.vercel.app/api/pin/"
+    parts = repo.split("/")
+
+    owner, name = parts
+
+    return f"""
+<a href="https://github.com/{repo}">
+    <img height="150em" width="412em" align="center" src="{base_url}?username={owner}&repo={name}&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="${name} repo pin" />
+</a>"""
+
+
 try:
     # Open the file and read its contents
     with open("README.md.rst", "r") as file:
@@ -96,13 +108,13 @@ try:
 
     roles = f"""
 ### Major Projects/Company’s
-{',\n'.join(major_projects_lines)},
+{",\n".join(major_projects_lines)},
 
 ### Non-Major Projects/Company's
-{',\n'.join(nonmajor_projects_lines)},
+{",\n".join(nonmajor_projects_lines)},
 
 ### Opensource Projects: 
-{',\n'.join(opensource_projects_lines)}
+{",\n".join(opensource_projects_lines)}
 
 
     """
@@ -111,9 +123,24 @@ try:
         "Roles ✍️", roles
     )
 
+    repos_list = [
+        "eveeifyeve/Dotfiles",
+        "Minecraft-Essentials/minecraft-essentials",
+        "eveeifyeve/docker-rust-minecraft-server",
+        "MCOpenAnti/MCOpenAnti",
+        "eveeifyeve/DJApp",
+        "eveeifyeve/BedrockGradleManifest",
+    ]
+
+    repos = f"""
+### Check out all of my repos!
+{"".join(github_extra_repos(repo) for repo in repos_list)}
+    """
+
     replacements = {
         "List": skillsImg,
         "Details": details,
+        "Repos": repos,
     }
 
     result = extract_and_replace(template, replacements)
