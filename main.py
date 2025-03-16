@@ -124,12 +124,14 @@ try:
     )
 
     repos_list = [
-        "eveeifyeve/Dotfiles",
+        "Eveeifyeve/Dotfiles",
         "Minecraft-Essentials/minecraft-essentials",
-        "eveeifyeve/docker-rust-minecraft-server",
+        "Eveeifyeve/Skyblockify",
         "MCOpenAnti/MCOpenAnti",
-        "eveeifyeve/DJApp",
-        "eveeifyeve/BedrockGradleManifest",
+        "Eveeifyeve/DJApp",
+        "Eveeifyeve/BedrockGradleManifest",
+        "Eveeifyeve/vexus",
+        "Eveeifyeve/docker-rust-minecraft-server",
     ]
 
     repos = f"""
