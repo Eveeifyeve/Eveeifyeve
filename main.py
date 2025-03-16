@@ -135,7 +135,6 @@ try:
     ]
 
     repos = f"""
-### Check out all of my repos!
 {"".join(github_extra_repos(repo) for repo in repos_list)}
     """
 

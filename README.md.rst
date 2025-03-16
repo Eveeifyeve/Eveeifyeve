@@ -12,6 +12,6 @@ Hi, I am Eveeifyeve 👋
 
 ${Details}
 
-![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
-
 ${Repos}
+
+![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
