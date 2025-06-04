@@ -1,7 +1,7 @@
 
 <p align="center">
     <a href="https://github.com/LelouchFR/skill-icons">
-        <img src="https://go-skill-icons.vercel.app/api/icons?i=ts,js,html,css,sass,astro,svelte,swift,go,cpp,react,kotlin,lua,rust,zig,vue,java,svg,nix,gleam,python,bash,dart,maven,gradle,bootstrap,godot,nextjs,supabase,replit,tailwind,tauri,electron,vercel,vite,webpack,prisma,gatsby,nginx,nodejs,cmake,githubactions,flutter,jquery,angular,solidjs,bun,discordjs,mongodb,sqlite,postgresql,surrealdb,vim,neovim,idea,vscode,docker,postman,github,gimp,pr,davinci,arcbrowser,zen,firefox,chrome&perline=13" />
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=ts,js,html,css,sass,astro,svelte,swift,go,cpp,asm,react,kotlin,lua,rust,zig,vue,java,svg,nix,gleam,python,bash,dart,maven,gradle,bootstrap,godot,nextjs,supabase,replit,tailwind,tauri,electron,vercel,vite,webpack,prisma,gatsby,nginx,nodejs,cmake,githubactions,flutter,jquery,angular,solidjs,bun,discordjs,mongodb,sqlite,postgresql,surrealdb,vim,neovim,idea,vscode,docker,postman,github,gimp,pr,davinci,arcbrowser,zen,firefox,chrome&perline=13" />
     </a>
 </p>
     
