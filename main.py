@@ -126,8 +126,8 @@ try:
     repos_list = [
         "Eveeifyeve/Dotfiles",
         "Minecraft-Essentials/minecraft-essentials",
-        "Eveeifyeve/Skyblockify",
-        "MCOpenAnti/MCOpenAnti",
+        "DigitalBrewStudios/Skyblockify",
+        "DigitalBrewStudios/polar-rs",
         "Eveeifyeve/DJApp",
         "Eveeifyeve/BedrockGradleManifest",
         "Eveeifyeve/vexus",
