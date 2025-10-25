@@ -86,32 +86,24 @@ try:
 <img src="{stats_base_url}/top-langs?username=eveeifyeve&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" height="150" alt="languages graph"  />
     """
 
-    major = {"TeaClient": "CEO/Founder", "OpusClient": "Developer (2023-2024)"}
-    nonmajor = {
-        "DuvanMC": "Manager of Development (2024)",
-        "Nodeforge": "Developer",
-    }
+    role_response = requests.get("https://eveeifyeve.pages.dev/api/roles")
+    roles = role_response.json()
 
+    business = {role["business"]: role["name"] for role in roles}
     opensource = {
         "Evolutify": "CEO",
         "Cordevall": "CEO",
         "Minecraft-essentials": "Owner",
     }
 
-    major_projects_lines = [f"- {project}: {role}" for project, role in major.items()]
-    nonmajor_projects_lines = [
-        f"- {project}: {role}" for project, role in nonmajor.items()
-    ]
+    business_lines = [f"- {project}: {role}" for project, role in business.items()]
     opensource_projects_lines = [
         f"- {project}: {role}" for project, role in opensource.items()
     ]
 
     roles = f"""
-### Major Projects/Company’s
-{",\n".join(major_projects_lines)},
-
-### Non-Major Projects/Company's
-{",\n".join(nonmajor_projects_lines)},
+### Businesses
+{",\n".join(business_lines)},
 
 ### Opensource Projects: 
 {",\n".join(opensource_projects_lines)}
