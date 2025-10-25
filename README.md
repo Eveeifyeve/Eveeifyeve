@@ -28,13 +28,11 @@ Hi, I am Eveeifyeve 👋
 <details>
     <summary>Roles ✍️✍️</summary>
     
-### Major Projects/Company’s
-- TeaClient: CEO/Founder,
-- OpusClient: Developer (2023-2024),
-
-### Non-Major Projects/Company's
-- DuvanMC: Manager of Development (2024),
-- Nodeforge: Developer,
+### Businesses
+- DigitalBrewStudios: Chief Executive Officer,
+- OpusClient: Senior Software Engineer,
+- NodeForge: Senior Software Developer,
+- DuvanMC: Junior Software Developer,
 
 ### Opensource Projects: 
 - Evolutify: CEO,
