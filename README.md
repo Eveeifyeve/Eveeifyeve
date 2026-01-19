@@ -52,9 +52,6 @@ Hi, I am Eveeifyeve 👋
 <a href="https://github.com/Minecraft-Essentials/minecraft-essentials">
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Minecraft-Essentials&repo=minecraft-essentials&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$minecraft-essentials repo pin" />
 </a>
-<a href="https://github.com/DigitalBrewStudios/Skyblockify">
-    <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DigitalBrewStudios&repo=Skyblockify&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$Skyblockify repo pin" />
-</a>
 <a href="https://github.com/DigitalBrewStudios/polar-rs">
     <img height="150em" width="412em" align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=DigitalBrewStudios&repo=polar-rs&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" alt="$polar-rs repo pin" />
 </a>
