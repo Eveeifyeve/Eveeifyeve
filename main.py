@@ -118,7 +118,6 @@ try:
     repos_list = [
         "Eveeifyeve/Dotfiles",
         "Minecraft-Essentials/minecraft-essentials",
-        "DigitalBrewStudios/Skyblockify",
         "DigitalBrewStudios/polar-rs",
         "Eveeifyeve/DJApp",
         "Eveeifyeve/BedrockGradleManifest",
