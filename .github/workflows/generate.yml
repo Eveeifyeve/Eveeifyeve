@@ -1,44 +1,88 @@
-name: Generate Readme
+name: Generate
 
-on: 
-  schedule: 
+on:
+  schedule:
+    - cron: "0 0 * * *"
     - cron: "*/30 * * * *"
   push:
     branches: ["main"]
-    paths: 
-      - "main.py"
-      - "README.md.rst"
+    paths:
+      - "flake.nix"
+      - "README.md"
   pull_request:
     branches: ["main"]
-    paths: 
-      - "main.py"
-      - "README.md.rst"
+    paths:
+      - "flake.nix"
+      - "README.md"
   workflow_dispatch:
 
-
 jobs:
-  generate:
+  generate-readme:
     runs-on: ubuntu-latest
-    steps: 
+    permissions:
+      contents: write
+    outputs:
+      matrix: ${{ steps.list.outputs.matrix }}
+    steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12.6'
-
-      - name: Install version
-        run: pip install requests
-
-      - name: Generate
-        run: python main.py
-
-      - name: Commit Generate
-        continue-on-error: true
+      - uses: cachix/install-nix-action@v31
+      - name: Get projects list
+        id: list
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          PROJECTS=$(nix eval .#projectsList --json)
+          echo "matrix=$PROJECTS" >> $GITHUB_OUTPUT
 
-          git add README.md
-          git commit -m 'chore: updated generated readme'
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&bg_color=30,34e8ff,9e26ff&title_color=000&text_color=fff&show_icons=true
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate pin card for ${{ matrix.project.owner }}/${{ matrix.project.repo }}
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=${{ matrix.project.owner }}&repo=${{ matrix.project.repo }}
+          path: profile/pin-${{ matrix.project.owner }}-${{ matrix.project.repo }}.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run generate readme using nix via mdsh
+        run: nix develop --command mdsh
+
+      - name: Commit Readme
+        run: |
+          git config --global user.name "$BOT_NAME"
+          git config --global user.email "$BOT_EMAIL"
+          git add -A
+          git commit -m "chore: updated generated readme" || exit 0
           git push
+  generate-snake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push snake.svg to output branch
+        uses: crazy-max/ghaction-github-pages@v4.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
