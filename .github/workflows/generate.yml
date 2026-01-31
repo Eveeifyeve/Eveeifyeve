@@ -1,44 +1,142 @@
-name: Generate Readme
+name: Generate
 
-on: 
-  schedule: 
+on:
+  schedule:
+    - cron: "0 0 * * *"
     - cron: "*/30 * * * *"
   push:
     branches: ["main"]
-    paths: 
-      - "main.py"
-      - "README.md.rst"
+    paths:
+      - "flake.nix"
+      - "README.md"
   pull_request:
     branches: ["main"]
-    paths: 
-      - "main.py"
-      - "README.md.rst"
+    paths:
+      - "flake.nix"
+      - "README.md"
   workflow_dispatch:
 
-
 jobs:
-  generate:
+  get-projects-list:
+    if: github.event_name != 'schedule' # Only run on push
     runs-on: ubuntu-latest
-    steps: 
+    outputs:
+      matrix: ${{ steps.list.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+
+      - name: Get projects list
+        id: list
+        run: |
+          PROJECTS=$(nix eval .#projectsList --json)
+          echo "matrix=$PROJECTS" >> $GITHUB_OUTPUT
+
+  generate-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&bg_color=30,34e8ff,9e26ff&title_color=000&text_color=fff&show_icons=true
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload stats artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: stats-cards
+          path: profile/
+
+  generate-pins:
+    if: github.event_name != 'schedule' # Only run on push.
+    runs-on: ubuntu-latest
+    needs: get-projects-list
+    strategy:
+      matrix:
+        project: ${{ fromJson(needs.get-projects-list.outputs.matrix) }}
+    steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Generate pin card for ${{ matrix.project.owner }}/${{ matrix.project.repo }}
+        uses: readme-tools/github-readme-stats-action@v1
         with:
-          python-version: '3.12.6'
+          card: pin
+          options: username=${{ matrix.project.owner }}&repo=${{ matrix.project.repo }}&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff
+          path: profile/pin-${{ matrix.project.owner }}-${{ matrix.project.repo }}.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install version
-        run: pip install requests
+      - name: Upload pin card artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pin-${{ matrix.project.owner }}-${{ matrix.project.repo }}
+          path: profile/pin-${{ matrix.project.owner }}-${{ matrix.project.repo }}.svg
 
-      - name: Generate
-        run: python main.py
+  commit:
+    runs-on: ubuntu-latest
+    needs:
+      - generate-stats
+      - generate-pins
+    if: always() && needs.generate-stats.result == 'success' && (needs.generate-pins.result == 'success' || needs.generate-pins.result == 'skipped')
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
 
-      - name: Commit Generate
+      - name: Download stats cards
+        uses: actions/download-artifact@v4
+        with:
+          name: stats-cards
+          path: profile/
+
+      - name: Download all pin cards
+        if: github.event_name != 'schedule'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: pin-*
+          path: profile/
+          merge-multiple: true
+
+      - name: Generate README via mdsh
+        run: nix develop --command mdsh
+
+      - name: Commit everything
         continue-on-error: true
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-
-          git add README.md
-          git commit -m 'chore: updated generated readme'
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: updated generated readme" || exit 0
           git push
+
+  generate-snake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push snake.svg to output branch
+        uses: crazy-max/ghaction-github-pages@v4.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
