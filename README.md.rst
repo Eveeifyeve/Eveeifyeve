@@ -3,10 +3,10 @@ ${List}
 Hi, I am Eveeifyeve 👋
 -------------------------
 *   🌍  I'm based in Australia
-*   🔭  Im currently a developer at [@Opus-Client](https://github.com/Opus-Client) and CTO at [@NodeForge-Hosting](https://github.com/NodeForge-Hosting)
-*   🚀  I'm currently working on: [@TeaClientMC](https://github.com/TeaClientMC) (Quality of Life Minecraft Client) & [@Minecraft-Essentials](https://github.com/Minecraft-Essentials) (Essnetails for Minecraft Client Launchers)
-*   🌟  I specialize in fullstack and Minecraft Mod/Client Developer
-*   ✉️  You can contact me [here](https://eveeifyeve.pages.dev/contact)
+*   🔭  I Currently Own [DigitalBrewStudios](https://github.com/DigitalBrewStudios).
+*   🚀  I'm currently working on: [DigitalBrewStudios Products/Contributions](https://digitalbrewstudios.com)
+*   🌟  I specialize in Software Development of all types (eg. games, vr/ar, ai and more)
+*   ✉️  You can contact me [here (Personal Stuff only)](https://eveeifyeve.pages.dev/contact) or [here (Business reasons)](https://digitalbrewstudios.com/contact-us).
 
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=eveeifyeve.eveeifyeve&left_color=royalblue&right_color=mediumpurple&left_text=People%20Visited:)
 
