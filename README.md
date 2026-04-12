@@ -18,8 +18,8 @@ Hi, I am Eveeifyeve 👋
 <details>
     <summary>Github Stats ⚡️✍️</summary>
     
-<img src="https://github-readme-stats.vercel.app/api?username=eveeifyeve&bg_color=30,34e8ff,9e26ff&title_color=000&text_color=fff" height="150" alt="stats graph"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=eveeifyeve&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&bg_color=30,34e8ff,9e26ff&hide_border=false&order=2&title_color=000&text_color=fff" height="150" alt="languages graph"  />
+<img src="./profile/stats.svg" height="150" alt="stats graph"/>
+<img src="./profile/top-langs.svg" height="150" alt="languages graph"  />
     
 </details>
 
@@ -28,14 +28,14 @@ Hi, I am Eveeifyeve 👋
 <!-- `> nix run .#roles` -->
 
 <!-- BEGIN mdsh -->
-""### Businesses
-- DigitalBrewStudios: Chief Executive Officer,
-- OpusClient: Senior Software Engineer,
-- NodeForge: Senior Software Developer,
-- DuvanMC: Junior Software Developer
+### Businesses
+- DigitalBrewStudios: Owner/Proprietor (2025-present),
+- OpusClient: Senior Software Engineer (2023-present),
+- NodeForge: Senior Software Developer (2024-2025),
+- DuvanMC: Junior Software Developer (2024-2024)
 
 ### Opensource Projects
-- Nixpkgs: Windows Enablement and Packaging Team Member & Nim Packaging Team Member""
+- Nixpkgs: Windows Enablement and Packaging Team Member & Nim Packaging Team Member
 <!-- END mdsh -->
 
     
