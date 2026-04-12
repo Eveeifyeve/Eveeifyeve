@@ -1,4 +1,5 @@
 <!-- `> nix run .#skillIcon` -->  
+
 <!-- BEGIN mdsh -->
  <p align="center"><a href="https://github.com/LelouchFR/skill-icons"><img src="https://go-skill-icons.vercel.app/api/icons?i=ts,js,html,css,sass,astro,svelte,swift,go,cpp,asm,react,kotlin,lua,rust,zig,vue,java,svg,nix,gleam,python,bash,dart,maven,gradle,bootstrap,godot,nextjs,supabase,replit,tailwind,tauri,electron,vercel,vite,webpack,prisma,gatsby,nginx,nodejs,cmake,githubactions,flutter,jquery,angular,solidjs,bun,discordjs,mongodb,sqlite,postgresql,surrealdb,vim,neovim,idea,vscode,docker,postman,github,gimp,pr,davinci,arcbrowser,zen,firefox,chrome&perline=13" /></a></p>
 <!-- END mdsh -->
@@ -27,18 +28,14 @@ Hi, I am Eveeifyeve 👋
 <!-- `> nix run .#roles` -->
 
 <!-- BEGIN mdsh -->
-### Major Projects/Company’s
-- TeaClient: CEO/Founder,
-- OpusClient: Developer (2023-2024),
+""### Businesses
+- DigitalBrewStudios: Chief Executive Officer,
+- OpusClient: Senior Software Engineer,
+- NodeForge: Senior Software Developer,
+- DuvanMC: Junior Software Developer
 
-### Non-Major Projects/Company's
-- DuvanMC: Manager of Development (2024),
-- Nodeforge: Developer,
-
-### Opensource Projects: 
-- Evolutify: CEO,
-- Cordevall: CEO,
-- Minecraft-essentials: Owner
+### Opensource Projects
+- Nixpkgs: Windows Enablement and Packaging Team Member & Nim Packaging Team Member""
 <!-- END mdsh -->
 
     
