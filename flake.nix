@@ -28,16 +28,12 @@
           repo = "Dotfiles";
         }
         {
-          owner = "NixOps4";
-          repo = "NixOps4";
+          owner = "TeaClientMC";
+          repo = "Registry";
         }
         {
           owner = "nix-community";
           repo = "nix-user-chroot";
-        }
-        {
-          owner = "nix-community";
-          repo = "nurl";
         }
       ];
 
