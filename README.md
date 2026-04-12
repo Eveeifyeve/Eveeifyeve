@@ -29,10 +29,10 @@ Hi, I am Eveeifyeve 👋
 
 <!-- BEGIN mdsh -->
 ### Businesses
-- DigitalBrewStudios: Owner/Proprietor (2025-present),
-- OpusClient: Senior Software Engineer (2023-present),
+- DigitalBrewStudios: Owner/Proprietor,
+- OpusClient: Senior Software Engineer,
 - NodeForge: Senior Software Developer (2024-2025),
-- DuvanMC: Junior Software Developer (2024-2024)
+- DuvanMC: Junior Software Developer (2024)
 
 ### Opensource Projects
 - Nixpkgs: Windows Enablement and Packaging Team Member & Nim Packaging Team Member
