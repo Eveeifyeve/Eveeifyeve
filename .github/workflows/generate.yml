@@ -35,7 +35,7 @@ jobs:
   generate-stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
@@ -66,7 +66,7 @@ jobs:
       matrix:
         project: ${{ fromJson(needs.get-projects-list.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Generate pin card for ${{ matrix.project.owner }}/${{ matrix.project.repo }}
         uses: readme-tools/github-readme-stats-action@v1
@@ -91,7 +91,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: cachix/install-nix-action@v31
 
       - name: Download stats cards
@@ -129,12 +129,14 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg
+          outputs: | 
+            dist/snake.svg?color_snake=purple&color_dots=#c8f5f0,#7de8dc,#2dd4bf,#0fb8a8,#0a8c7e
+            dist/snake-dark.svg?color_snake=purple&color_dots=#c8f5f0,#7de8dc,#2dd4bf,#0fb8a8,#0a8c7e&palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push snake.svg to output branch
-        uses: crazy-max/ghaction-github-pages@v4.1.0
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist

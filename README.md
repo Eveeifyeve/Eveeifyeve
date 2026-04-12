@@ -53,3 +53,10 @@ Hi, I am Eveeifyeve 👋
 <!-- END mdsh -->
 
 ![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg" />
+</picture>
