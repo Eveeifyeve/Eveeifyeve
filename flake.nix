@@ -105,16 +105,12 @@
               '';
 
               pin-tags = writeNuBin "gen-pin-tags" ''
-                ls profile/pin-*.svg
-                  | get name
-                  | each { |file|
-                      let stem = ($file | path basename | str replace ".svg" "")
-                      let parts = ($stem | str replace "pin-" "" | split row "-")
-                      let owner = $parts.0
-                      let repo = ($parts | skip 1 | str join "-")
-                      "<a href=\"https://github.com/" + $owner + "/" + $repo + "\"><img src=\"" + $file + "\" height=\"150em\" width=\"412em\" align=\"center\" alt=\"" + $owner + "/" + $repo + "\" /></a>"
-                  }
-                  | str join "\n"
+                let projects = ${builtins.toJSON self.projectsList}
+                $projects | each { |p|
+                  let file = ("profile/pin-" + $p.owner + "-" + $p.repo + ".svg")
+                  "<a href=\"https://github.com/" + $p.owner + "/" + $p.repo + "\"><img src=\"" + $file + "\" height=\"150em\" width=\"412em\" align=\"center\" alt=\"" + $p.owner + "/" + $p.repo + "\" /></a>"
+                }
+                | str join "\n"
               '';
             };
 
