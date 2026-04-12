@@ -71,34 +71,36 @@
             in
             {
               roles = writeNuBin "gen-roles" ''
-                                let roles = (http get https://eveeifyeve.pages.dev/api/roles | decode | from json)
-                let format_years = {|it|
+                                                let roles = (http get https://eveeifyeve.pages.dev/api/roles | decode | from json)
+                																let format_years = {|it|
                     let start = ($it | get -o startDate)
                     let end   = ($it | get -o endDate)
                     let start_year = if ($start | is-not-empty) { $start | split row "-" | last } else { null }
                     let end_year   = if ($end | is-not-empty) { $end | split row "-" | last } else { null }
 
                     if ($start_year | is-not-empty) and ($end_year | is-not-empty) {
-                        $" \(($start_year)-($end_year)\)"
-                    } else if ($start_year | is-not-empty) {
-                        $" \(($start_year)-present\)"
+                        if $start_year == $end_year {
+                            $" \(($start_year)\)"
+                        } else {
+                            $" \(($start_year)-($end_year)\)"
+                        }
                     } else {
                         ""
                     }
                 }
-                                let business = (
-                                    $roles
-                                    | reduce -f {} {|it, acc|
-                                        let years = (do $format_years $it)
-                                        $acc | upsert $it.business $"($it.name)($years)"
-                                    }
-                                    | transpose key value
-                                    | each {|it| $"- ($it.key): ($it.value)"}
-                                    | str join ",\n"
-                                )
+                                                let business = (
+                                                    $roles
+                                                    | reduce -f {} {|it, acc|
+                                                        let years = (do $format_years $it)
+                                                        $acc | upsert $it.business $"($it.name)($years)"
+                                                    }
+                                                    | transpose key value
+                                                    | each {|it| $"- ($it.key): ($it.value)"}
+                                                    | str join ",\n"
+                                                )
 
-                                let opensource = "${lib.concatStringsSep "\n" opensource}"
-                                print $"### Businesses\n($business)\n\n### Opensource Projects\n($opensource)"
+                                                let opensource = "${lib.concatStringsSep "\n" opensource}"
+                                                print $"### Businesses\n($business)\n\n### Opensource Projects\n($opensource)"
               '';
 
               skillIcon = writeNuBin "gen-skills" ''
