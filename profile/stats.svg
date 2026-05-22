@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Eveeifyeve's GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 19, Total Commits  (last year) : 374, Total PRs: 154, Total Issues: 160, Contributed to (last year): 93</desc>
+        <desc id="descId">Total Stars Earned: 19, Total Commits  (last year) : 374, Total PRs: 154, Total Issues: 161, Contributed to (last year): 93</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 85.8541539466668;
+        stroke-dashoffset: 85.84737214000957;
       }
     }
   
@@ -217,7 +217,7 @@
         x="219.01"
         y="12.5"
         data-testid="issues"
-      >160</text>
+      >161</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
