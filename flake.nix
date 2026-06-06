@@ -35,6 +35,10 @@
           owner = "nix-community";
           repo = "nix-user-chroot";
         }
+        {
+          owner = "eveeifyeve";
+          repo = "dendritic-helper";
+        }
       ];
 
       perSystem =
