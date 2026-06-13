@@ -49,7 +49,6 @@ Hi, I am Eveeifyeve 👋
 <a href="https://github.com/Eveeifyeve/Dotfiles"><img src="profile/pin-Eveeifyeve-Dotfiles.svg" height="150em" width="412em" align="center" alt="Eveeifyeve/Dotfiles" /></a>
 <a href="https://github.com/TeaClientMC/Registry"><img src="profile/pin-TeaClientMC-Registry.svg" height="150em" width="412em" align="center" alt="TeaClientMC/Registry" /></a>
 <a href="https://github.com/nix-community/nix-user-chroot"><img src="profile/pin-nix-community-nix-user-chroot.svg" height="150em" width="412em" align="center" alt="nix-community/nix-user-chroot" /></a>
-<a href="https://github.com/eveeifyeve/dendritic-helper"><img src="profile/pin-eveeifyeve-dendritic-helper.svg" height="150em" width="412em" align="center" alt="eveeifyeve/dendritic-helper" /></a>
 <!-- END mdsh -->
 
 ![Snake](https://raw.githubusercontent.com/eveeifyeve/eveeifyeve/output/snake.svg)
